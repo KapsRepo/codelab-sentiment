@@ -104,8 +104,8 @@ git clone https://github.com/CodeForAfricaLabs/sentiment_icebreaker
 
 - Create a new Twitter app here: https://apps.twitter.com/
 - Obtain Consumer Key, Consumer secret from the "Keys and Access Tokens" tab.
-- Create access tokens and obtain the "Access Token" and "Access Token Secret"
 - Update permissions to allow for "Read, Write and Access direct messages"
+- Generate access tokens and obtain the "Access Token" and "Access Token Secret"
 
 
 2) Copy twitter API credentials into the configuration file: `twitter_/config.py`. 
