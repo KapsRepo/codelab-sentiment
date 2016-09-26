@@ -147,6 +147,44 @@ CFLAGS=-I/usr/local/opt/icu4c/include LDFLAGS=-L/usr/local/opt/icu4c/lib pip ins
 make install-language-packs
 ```
 
+7) Open `twitter_/listener.py` and write code to detect language
+```
+msg_text = payload["message"]
+language_detector = Detector(msg_text)
+language = language_detector.language.name
+```
+
+8) Write code to retrieve message sentiment polarity
+```
+try:
+    msg_polarity = Text(msg_text).polarity
+except ZeroDivisionError:
+    msg_polarity = 0
+```
+
+9) Write code to extract entities in the message
+```
+msg_entities = []
+for entity in Text(msg_text).entities:
+    msg_entities.append(entity)
+```
+
+10) Send response to user
+```
+response_message = """[%s] Hi there, @%s.
+Here's what we got from your message:
+
+Language: %s
+Sentiment polarity: %s - %s
+Entities: %s
+""" % (payload["request_id"], payload["username"], language,
+	msg_polarity, msg_sentiment, msg_entities)
+print response_message
+
+# send DM response to user
+self.api.send_direct_message(user=payload["username"], text=response_message)
+```
+
 7) Start the Twitter Direct Messages stream listener:
 ```
 make start
