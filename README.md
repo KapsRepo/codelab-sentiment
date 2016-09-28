@@ -3,7 +3,6 @@
 API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/
 
 1) Navigate to http://www.alchemyapi.com/ and obtain an API key
-   (Use this key: xxxxxxxxxxx )
 
 2) Workspace:  http://jsfiddle.net/mevey/wgL0vmy4/42/
    - Pre-filled HTML and CSS on top left and right
@@ -13,8 +12,7 @@ API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/ap
 3) On the Javascript section on JS-Fiddle, enter the Alchemy API key
 
 ```
-sample key 1 = 'b66585d88e1c9cbb09218239e8b16ca03e17b567'
-sample key 2 = '51e2eb05801719c0c12dd695520bbd2811c7781f'
+key = '51e2eb05801719c0c12dd695520bbd2811c7781f'
 ```
 
 4) Fill in the API URLs for each end-point. Reference: http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/#sentiment
