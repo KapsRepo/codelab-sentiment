@@ -4,7 +4,7 @@ API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/ap
 
 1) Navigate to http://www.alchemyapi.com/ and obtain an API key
 
-2) Workspace:  http://jsfiddle.net/mevey/wgL0vmy4/42/
+2) Workspace:  http://jsfiddle.net/mevey/wgL0vmy4/43/
    - Pre-filled HTML and CSS on top left and right
    - Edit Javascript on bottom left
    - Results on bottom right
