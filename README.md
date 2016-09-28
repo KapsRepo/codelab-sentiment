@@ -204,6 +204,11 @@ for entity in Text(msg_text).entities:
 make start
 ```
 
+11) Start the web server:
+```
+make webserver
+```
+
 :warning: If you encounter an issue with imports, 
 ```
 export PYTHONPATH=/location/of/your/project/
