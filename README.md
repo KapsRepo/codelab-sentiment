@@ -165,6 +165,11 @@ pip install -r requirements.txt
 CFLAGS=-I/usr/local/opt/icu4c/include LDFLAGS=-L/usr/local/opt/icu4c/lib pip install pyicu
 ```
 
+:warning: Ubuntu dependencies:
+```
+sudo apt-get install libicu-dev
+```
+
 6) Install polyglot language packs
 
 ```
