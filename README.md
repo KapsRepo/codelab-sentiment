@@ -206,13 +206,18 @@ for entity in Text(msg_text).entities:
     msg_entities.append(entity)
 ```
 
+10) Change the question on HTML: `web/app/templates/index.html`
+```
+<center><h1 class="question">Tell us what you think about this session.</h1></center>
 
-10) Start the Twitter Direct Messages stream listener:
+```
+
+11) Start the Twitter Direct Messages stream listener:
 ```
 make start
 ```
 
-11) Start the web server:
+12) Start the web server:
 ```
 make webserver
 ```
