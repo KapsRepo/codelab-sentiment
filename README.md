@@ -82,7 +82,11 @@ curl -X POST \
 		data: $('#form').serialize(),
 		contentType: 'application/x-www-form-urlencoded',
 		success: function(msg) {
+		
+		
 		  $('#sentiment-results').html('<span>' + msg.docSentiment.type + '</span> with a score of <span>' + msg.docSentiment.score + '</span>')
+		  
+		  
 		}
 	  });
 	  
@@ -93,12 +97,16 @@ curl -X POST \
 		data: $('#form').serialize(),
 		contentType: 'application/x-www-form-urlencoded',
 		success: function(msg) {
+		
+		
 			markup = ''
 			for (k in msg.entities) {
 				v = msg.entities[k]
 				markup += '<span>Text: ' + v.text + '</span>  <span>count: ' + v.count + '</span>  <span>Type: ' + v.type + '</span>  Relevance: <span>' + v.relevance + '</span>  Sentiment: <span>' + v.sentiment.type + '</span><br>'
 			}
 			$('#entities-results').html(markup)
+			
+			
 		}
 	  });
 ```
