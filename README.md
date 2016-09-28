@@ -17,11 +17,11 @@ key = 'b66585d88e1c9cbb09218239e8b16ca03e17b567'
 
 ```
 sentiment_url = 'https://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment?outputMode=json&apikey=' + key
-	sentiment_text = 'https://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment?outputMode=json&apikey=' + key
-	sentiment_html = 'https://gateway-a.watsonplatform.net/calls/html/HTMLGetTextSentiment?outputMode=json&apikey=' + key
-	entities_url = 'https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
-	entities_text = 'https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
-	entities_html = 'https://gateway-a.watsonplatform.net/calls/html/HTMLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
+sentiment_text = 'https://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment?outputMode=json&apikey=' + key
+sentiment_html = 'https://gateway-a.watsonplatform.net/calls/html/HTMLGetTextSentiment?outputMode=json&apikey=' + key
+entities_url = 'https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
+entities_text = 'https://gateway-a.watsonplatform.net/calls/text/TextGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
+entities_html = 'https://gateway-a.watsonplatform.net/calls/html/HTMLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
 ```
 
 5) On your terminal, use curl to test the URLs and view the response format.
