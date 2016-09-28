@@ -5,7 +5,7 @@ API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/ap
 1) Navigate to http://www.alchemyapi.com/ and obtain an API key
    (Use this key: xxxxxxxxxxx )
 
-2) Fork fiddle on https://jsfiddle.net/mevey/wgL0vmy4/21/
+2) Fork fiddle on http://jsfiddle.net/mevey/wgL0vmy4/24/
 
 3) On the Javascript section on JS-Fiddle, enter the Alchemy API key
 
@@ -21,9 +21,20 @@ entities_api = 'https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamed
 ```
 
 5) On your terminal, use curl to test the URLs and view the response format.
+```
+curl -X POST \
+-d "outputMode=json" \
+-d "url=http://www.huffingtonpost.com/2010/06/22/iphone-4-review-the-worst_n_620714.html" \
+"https://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment?apikey=b66585d88e1c9cbb09218239e8b16ca03e17b567"
+```
+
 
 ```
-curl -X POST -d "outputMode=json" -d "apikey=b66585d88e1c9cbb09218239e8b16ca03e17b567" --data-urlencode "text=hello" "https://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment"
+curl -X POST \
+-d "outputMode=json" \
+-d "maxRetrieve=3" \
+-d "url=http://www-03.ibm.com/press/us/en/pressrelease/49384.wss" \
+"https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamedEntities?apikey=b66585d88e1c9cbb09218239e8b16ca03e17b567"
 ```
 
 6) Response format example:
@@ -44,15 +55,15 @@ curl -X POST -d "outputMode=json" -d "apikey=b66585d88e1c9cbb09218239e8b16ca03e1
 
 ```
 	  $.ajax({
-      method: "POST",
-      url: url,
-      data: $('#form').serialize(),
-      contentType: 'application/x-www-form-urlencoded',
-      success: function(msg) {
+	      method: "POST",
+	      url: url,
+	      data: $('#form').serialize(),
+	      contentType: 'application/x-www-form-urlencoded',
+	      success: function(msg) {
 
-        // response manipulation here...
+		// response manipulation here...
 
-      }
+	      }
 	  });
 
 ```
