@@ -227,6 +227,8 @@ tail -f logs/twitter-stream.log
 * Aleph:  https://data.investigativecenters.org/
 * Alchemy API: http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/
 * Polyglot:  http://polyglot.readthedocs.io
+* Semantria:  https://www.lexalytics.com/semantria
+* Google Language APIs:  https://cloud.google.com/natural-language
 * Eve: github.com/mevey | twitter.com/muthonieve
 * Andrew: github.com/andkamau | twitter.com/andkamau
 
