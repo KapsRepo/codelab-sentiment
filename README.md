@@ -5,7 +5,7 @@ API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/ap
 1) Navigate to http://www.alchemyapi.com/ and obtain an API key
    (Use this key: xxxxxxxxxxx )
 
-2) Workspace:  http://jsfiddle.net/mevey/wgL0vmy4/24/
+2) Workspace:  http://jsfiddle.net/mevey/wgL0vmy4/42/
    - Pre-filled HTML and CSS on top left and right
    - Edit Javascript on bottom left
    - Results on bottom right
@@ -59,15 +59,15 @@ curl -X POST \
 
 ```
 	  $.ajax({
-	      method: "POST",
-	      url: url,
-	      data: $('#form').serialize(),
-	      contentType: 'application/x-www-form-urlencoded',
-	      success: function(msg) {
+	    method: "POST",
+	    url: sentiment_api + outputMode,
+	    data: $('#form').serialize(),
+	    contentType: 'application/x-www-form-urlencoded',
+	    success: function(msg) {
 
-		// response manipulation here...
+		// Write your response handling code here
 
-	      }
+	    }
 	  });
 
 ```
@@ -77,17 +77,32 @@ curl -X POST \
 9) An example of response handling for sentiment analysis:
 
 ```
-	  $.ajax({
+	//Sentiment Analysis
+	   $.ajax({
 		method: "POST",
-		url: url,
+		url: sentiment_api + outputMode,
 		data: $('#form').serialize(),
 		contentType: 'application/x-www-form-urlencoded',
 		success: function(msg) {
 		  $('#sentiment-results').html('<span>' + msg.docSentiment.type + '</span> with a score of <span>' + msg.docSentiment.score + '</span>')
-		  $(this).html('Submit')
 		}
 	  });
-
+	  
+	  //Entity extraction
+	  $.ajax({
+		method: "POST",
+		url: entities_api + outputMode,
+		data: $('#form').serialize(),
+		contentType: 'application/x-www-form-urlencoded',
+		success: function(msg) {
+			markup = ''
+			for (k in msg.entities) {
+				v = msg.entities[k]
+				markup += '<span>Text: ' + v.text + '</span>  <span>count: ' + v.count + '</span>  <span>Type: ' + v.type + '</span>  Relevance: <span>' + v.relevance + '</span>  Sentiment: <span>' + v.sentiment.type + '</span><br>'
+			}
+			$('#entities-results').html(markup)
+		}
+	  });
 ```
 
 10) Add another response handler for entity extraction.
