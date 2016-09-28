@@ -5,7 +5,7 @@ API documentation:  http://www.ibm.com/watson/developercloud/alchemy-language/ap
 1) Navigate to http://www.alchemyapi.com/ and obtain an API key
    (Use this key: xxxxxxxxxxx )
 
-2) Fork fiddle on https://jsfiddle.net/mevey/wgL0vmy4/14/
+2) Fork fiddle on https://jsfiddle.net/mevey/wgL0vmy4/21/
 
 3) On the Javascript section on JS-Fiddle, enter the Alchemy API key
 
@@ -16,8 +16,8 @@ key = 'b66585d88e1c9cbb09218239e8b16ca03e17b567'
 4) Fill in the API URLs for each end-point. Reference: http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/#sentiment
 
 ```
-sentiment_url = 'https://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment?outputMode=json&apikey=' + key
-entities_url = 'https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
+sentiment_api = 'https://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment?outputMode=json&apikey=' + key
+entities_api = 'https://gateway-a.watsonplatform.net/calls/url/URLGetRankedNamedEntities?outputMode=json&sentiment=1&apikey=' + key
 ```
 
 5) On your terminal, use curl to test the URLs and view the response format.
