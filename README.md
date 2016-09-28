@@ -215,3 +215,19 @@ mkdir logs
 ```
 tail -f logs/twitter-stream.log
 ```
+
+
+
+
+# Useful Links
+
+* JS Fiddle:  http://jsfiddle.net/mevey/wgL0vmy4/24/
+* Code: https://github.com/CodeForAfricaLabs/sentiment_icebreaker
+* UG election sentiment analysis: https://goo.gl/jcuJjC
+* Aleph:  https://data.investigativecenters.org/
+* Alchemy API: http://www.ibm.com/watson/developercloud/alchemy-language/api/v1/
+* Polyglot:  http://polyglot.readthedocs.io
+* Eve: github.com/mevey | twitter.com/muthonieve
+* Andrew: github.com/andkamau | twitter.com/andkamau
+
+
