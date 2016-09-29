@@ -122,7 +122,6 @@ curl -X POST \
 
 # Polyglot
 
-(Ice-breaker)
 * What is Polyglot?
 
 1) Clone the github repo: https://github.com/CodeForAfricaLabs/sentiment_icebreaker
